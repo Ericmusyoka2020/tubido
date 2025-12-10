@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tubido - Watch Music and Support Us by downloading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #9dfcff;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        header {
+            background-color: rgb(124, 221, 221);
+            padding: 10px;
+            color: #fff;
+        }
+        header img {
+            height: 40px;
+            vertical-align: middle;
+        }
+        header span {
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .ad-banner {
+            display: block;
+            width: 100%;
+            max-width: 970px;
+            height: 90px;
+            margin: 10px auto;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        input, select {
+            padding: 10px;
+            width: 300px;
+            max-width: 90%;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .video {
+            margin: 10px auto;
+            padding: 10px;
+            background: #fff;
+            border-radius: 6px;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            width: 90%;
+            max-width: 500px;
+        }
+        iframe {
+            width: 100%;
+            height: 280px;
+            border: none;
+        }
+        .download-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #2196F3;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+        footer {
+            margin-top: 40px;
+            font-size: 12px;
+            color: #421212;
+        }
+    </style>
+</head><script type='text/javascript' src='//pl27287041.profitableratecpm.com/fc/1c/bd/fc1cbd447f528301591b6125fccea3cc.js'></script>
+<body>
+
+    <div class="ad-banner">
+        <script type="text/javascript">
+            atOptions = {
+                'key': '0c9dcd8343ca4ab3886c2929ee9da2fd',
+                'format': 'iframe',
+                'height': 90,
+                'width': 728,
+                'params': {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/0c9dcd8343ca4ab3886c2929ee9da2fd/invoke.js"></script>
+    </div>
+
+    <header>
+        <img src="logo.png" alt="Tubido Logo">
+        <span>Tubido</span>
+    </header>
+
+    <!-- LANGUAGE SELECTOR ABOVE NAVIGATION -->
+    <select id="language" onchange="changeLanguage()">
+        <option value="Worldwide">🌍 Worldwide - English</option>
+        <option value="India">🇮🇳 India</option>
+        <option value="Israel">🇮🇱 Israel</option>
+        <option value="Germany">🇩🇪 Germany</option>
+        <option value="USA">🇺🇸 USA</option>
+        <option value="Arabia">🇸🇦 Arabia</option>
+        <option value="France">🇫🇷 France</option>
+        <option value="UK">🇬🇧 UK</option>
+        <option value="Africa">🌍 Africa</option>
+        <option value="Denmark">🇩🇰 Denmark</option>
+        <option value="Norway">🇳🇴 Norway</option>
+        <option value="Switzerland">🇨🇭 Switzerland</option>
+        <option value="Luxembourg">🇱🇺 Luxembourg</option>
+    </select>
+
+    <nav>
+        <a onclick="redirectWithAd('about.html')" id="nav-about">About Us</a> |
+        <a onclick="redirectWithAd('privacy.html')" id="nav-privacy">Privacy Policy</a> |
+        <a onclick="redirectWithAd('contact.html')" id="nav-contact">Contact Us</a>
+    </nav>
+
+    <h1 id="title">Search & Watch Music</h1>
+    <script type='text/javascript' src='//pl27287041.profitableratecpm.com/fc/1c/bd/fc1cbd447f528301591b6125fccea3cc.js'></script>
+
+    <input type="text" id="search" placeholder="Search music...">
+    <button onclick="searchMusic()">Search</button>
+
+    <div id="results"></div>
+
+    <script>
+        const languageTitles = {
+            "Worldwide": "Search & Watch Music",
+            "India": "संगीत खोजें और सुनें",
+            "Israel": "חפש והאזן למוזיקה",
+            "Germany": "Musik suchen und anhören",
+            "USA": "Search & Watch Music",
+            "Arabia": "البحث والاستماع للموسيقى",
+            "France": "Rechercher et écouter de la musique",
+            "UK": "Search & Watch Music",
+            "Africa": "Search & Listen to Music",
+            "Denmark": "Søg og lyt til musik",
+            "Norway": "Søk og lytt til musikk",
+            "Switzerland": "Recherchez et écoutez de la musique",
+            "Luxembourg": "Recherchez et écoutez de la musique"
+        };
+
+        const navLabels = {
+            "Worldwide": ["About Us", "Privacy Policy", "Contact Us"],
+            "India": ["हमारे बारे में", "गोपनीयता नीति", "संपर्क करें"],
+            "Israel": ["עלינו", "מדיניות פרטיות", "צור קשר"],
+            "Germany": ["Über uns", "Datenschutz", "Kontakt"],
+            "USA": ["About Us", "Privacy Policy", "Contact Us"],
+            "Arabia": ["معلومات عنا", "سياسة الخصوصية", "اتصل بنا"],
+            "France": ["À propos", "Politique de confidentialité", "Contactez-nous"],
+            "UK": ["About Us", "Privacy Policy", "Contact Us"],
+            "Africa": ["About Us", "Privacy Policy", "Contact Us"],
+            "Denmark": ["Om os", "Privatlivspolitik", "Kontakt os"],
+            "Norway": ["Om oss", "Personvern", "Kontakt oss"],
+            "Switzerland": ["À propos", "Politique de confidentialité", "Contactez-nous"],
+            "Luxembourg": ["À propos", "Politique de confidentialité", "Contactez-nous"]
+        };
+
+        const downloadTexts = {
+            "Worldwide": { mp3: "Download MP3", mp4: "Download MP4" },
+            "India": { mp3: "एमपी3 डाउनलोड करें", mp4: "एमपी4 डाउनलोड करें" },
+            "Israel": { mp3: "הורד MP3", mp4: "הורד MP4" },
+            "Germany": { mp3: "MP3 herunterladen", mp4: "MP4 herunterladen" },
+            "USA": { mp3: "Download MP3", mp4: "Download MP4" },
+            "Arabia": { mp3: "تحميل MP3", mp4: "تحميل MP4" },
+            "France": { mp3: "Télécharger MP3", mp4: "Télécharger MP4" },
+            "UK": { mp3: "Download MP3", mp4: "Download MP4" },
+            "Africa": { mp3: "Download MP3", mp4: "Download MP4" },
+            "Denmark": { mp3: "Download MP3", mp4: "Download MP4" },
+            "Norway": { mp3: "Last ned MP3", mp4: "Last ned MP4" },
+            "Switzerland": { mp3: "Télécharger MP3", mp4: "Télécharger MP4" },
+            "Luxembourg": { mp3: "Télécharger MP3", mp4: "Télécharger MP4" }
+        };
+
+        const apiKeys = [
+            "AIzaSyCKalRjdai_kTTy9EDJXUMcxTZWgTAtJ4Y",
+            "AIzaSyCeidOGnq2B7YqYQqOcTnyppzdsup8ExYA",
+            "AIzaSyA8u1ouSeByriv4gQMaPDqcD-I3qYfkKkU",
+            "AIzaSyBWNZ8AH57qIpzLx0-2vLPQJJ3c-Y553og",
+            "AIzaSyBuydWvV3vKXAP23b71-Lyu0wj2q7U48oc"
+        ];
+        let keyIndex = 0;
+
+        function changeLanguage() {
+            const lang = document.getElementById('language').value;
+            document.getElementById('title').textContent = languageTitles[lang] || "Search & Watch Music";
+            document.getElementById('search').placeholder = "Search music (" + lang + ")...";
+            const nav = navLabels[lang] || navLabels["Worldwide"];
+            document.getElementById("nav-about").textContent = nav[0];
+            document.getElementById("nav-privacy").textContent = nav[1];
+            document.getElementById("nav-contact").textContent = nav[2];
+
+            const resultsDiv = document.getElementById('results');
+            const downloadBtns = resultsDiv.querySelectorAll('.download-btn');
+            downloadBtns.forEach(btn => {
+                if (btn.textContent.includes("MP3")) {
+                    btn.textContent = downloadTexts[lang]?.mp3;
+                } else {
+                    btn.textContent = downloadTexts[lang]?.mp4;
+                }
+            });
+        }
+
+        function searchMusic() {
+            const query = document.getElementById('search').value.trim();
+            const lang = document.getElementById('language').value;
+            if (!query) return alert("Please enter a music name.");
+
+            const key = apiKeys[keyIndex % apiKeys.length];
+            keyIndex++;
+
+            fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${encodeURIComponent(query + ' ' + lang)}&type=video&key=${key}`)
+                .then(res => res.json())
+                .then(data => {
+                    const resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = '';
+                    data.items.forEach(video => {
+                        const videoDiv = document.createElement('div');
+                        videoDiv.className = 'video';
+                        videoDiv.innerHTML = `
+                            <iframe src="https://www.youtube.com/embed/${video.id.videoId}" allowfullscreen></iframe>
+                            <a class="download-btn" href="https://www.profitableratecpm.com/pcpwwc81r?key=7f5afbc01c6212e42c5b501fa9deaff9" target="_blank">Download MP3</a>
+                            <a class="download-btn" href="https://www.profitableratecpm.com/pcpwwc81r?key=7f5afbc01c6212e42c5b501fa9deaff9" target="_blank">Download MP4</a>
+                        `;
+                        resultsDiv.appendChild(videoDiv);
+                    });
+
+                    // 🟢 Re-apply language after search results are added
+                    changeLanguage();
+                });
+        }
+
+        function redirectWithAd(pageURL) {
+            window.location.href = "https://www.profitableratecpm.com/pcpwwc81r?key=7f5afbc01c6212e42c5b501fa9deaff9";
+            setTimeout(() => {
+                window.location.href = pageURL;
+            }, 3000);
+        }
+    </script>
+
+    <script type='text/javascript' src='//pl27287059.profitableratecpm.com/0c/cb/f2/0ccbf2ab9131ef2f82cb8206f88187cd.js'></script>
+
+    <footer>
+        &copy; 2025 Tubido. All rights reserved. | Multi-language: India, Israel, Germany, USA, Arabia, France, UK, Africa, Denmark, Norway, Switzerland, Luxembourg.
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us - Tubido</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #5ec0bb;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #000;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        select {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #2e2d2d;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #2e2d2d;
+            border-radius: 6px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #4CAF50;
+            color: #fcf8f8;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .contact-buttons {
+            margin-top: 30px;
+        }
+        .contact-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background: #1c8adb;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact-buttons a.whatsapp {
+            background: #25D366;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="about.html">About Us</a> |
+        <a href="privacy.html">Privacy Policy</a>
+    </nav>
+
+    <select id="language" onchange="changeLanguage()">
+        <option value="en">English</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+        <option value="ar">Arabic</option>
+        <option value="he">Hebrew</option>
+        <option value="hi">Hindi</option>
+    </select>
+
+    <h1 id="title">Contact Tubido</h1>
+    <p id="description">For any support or question, please send us a message below.</p>
+
+    <form action="https://formspree.io/f/xgvzogez" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required><br>
+        <input type="email" name="email" placeholder="Your Email" required><br>
+        <textarea name="message" placeholder="Your Message" required rows="5"></textarea><br>
+        <button type="submit">Send</button>
+    </form>
+
+    <div class="contact-buttons">
+        <a id="callBtn" href="tel:+254756225185">Call Us</a>
+        <a id="whatsappBtn" class="whatsapp" href="https://wa.me/254756225185" target="_blank">Chat on WhatsApp</a>
+    </div>
+
+    <script>
+        function changeLanguage() {
+            const lang = document.getElementById('language').value;
+            const titles = {
+                en: "Contact Tubido",
+                fr: "Contactez Tubido",
+                de: "Kontakt Tubido",
+                ar: "اتصل بـ Tubido",
+                he: "צור קשר עם Tubido",
+                hi: "Tubido से संपर्क करें"
+            };
+            const desc = {
+                en: "For any support or question, please send us a message below.",
+                fr: "Pour toute question, envoyez-nous un message ci-dessous.",
+                de: "Für Fragen senden Sie uns bitte eine Nachricht.",
+                ar: "لأي استفسار، أرسل لنا رسالة أدناه.",
+                he: "לשאלות או תמיכה, שלח לנו הודעה למטה.",
+                hi: "किसी भी सहायता के लिए, कृपया नीचे संदेश भेजें।"
+            };
+            const callLabels = {
+                en: "Call Us",
+                fr: "Appelez-nous",
+                de: "Rufen Sie uns an",
+                ar: "اتصل بنا",
+                he: "התקשר אלינו",
+                hi: "हमें कॉल करें"
+            };
+            const whatsappLabels = {
+                en: "Chat on WhatsApp",
+                fr: "Discuter sur WhatsApp",
+                de: "Chatten Sie auf WhatsApp",
+                ar: "الدردشة على واتساب",
+                he: "צ'אט ב-WhatsApp",
+                hi: "व्हाट्सएप पर चैट करें"
+            };
+
+            document.getElementById('title').textContent = titles[lang] || titles.en;
+            document.getElementById('description').textContent = desc[lang] || desc.en;
+            document.getElementById('callBtn').textContent = callLabels[lang] || callLabels.en;
+            document.getElementById('whatsappBtn').textContent = whatsappLabels[lang] || whatsappLabels.en;
+
+            if (lang === 'ar' || lang === 'he') {
+                document.body.style.direction = 'rtl';
+            } else {
+                document.body.style.direction = 'ltr';
+            }
+        }
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Us - Tubido</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #9dfcff;
+            color: #333;
+            padding: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        header {
+            background-color: rgb(124, 221, 221);
+            padding: 10px;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        header img {
+            height: 40px;
+            vertical-align: middle;
+        }
+        header span {
+            font-size: 22px;
+            font-weight: bold;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        nav {
+            margin: 20px 0;
+            text-align: center;
+        }
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        h1 {
+            color: #222;
+            text-align: center;
+        }
+        select {
+            padding: 8px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Tubido Logo">
+    <span>Tubido</span>
+</header>
+
+<nav>
+    <a href="index.html">Home</a> |
+    
+    <a href="privacy.html">Privacy Policy</a> |
+    <a href="contact.html">Contact Us</a>
+</nav>
+
+<select id="language" onchange="changeLanguage()">
+    <option value="Worldwide">Worldwide - English</option>
+    <option value="India">India</option>
+    <option value="Israel">Israel</option>
+    <option value="Germany">Germany</option>
+    <option value="USA">USA</option>
+    <option value="Arabia">Arabia</option>
+    <option value="France">France</option>
+    <option value="Britain">Britain</option>
+    <option value="UK">UK</option>
+    <option value="Africa">Africa</option>
+</select>
+
+<h1 id="about-title">About Tubido</h1>
+
+<div id="about-content">
+    <p>
+        Tubido is a worldwide platform created to help users discover, watch, and enjoy music content from around the globe. Our mission is to provide an easy and fast solution for music lovers to explore new songs, artists, and cultures without restrictions or limitations. Tubido offers a user-friendly interface that enables people of all ages to enjoy the beauty of music with just a few simple clicks.
+    </p>
+    <p>
+        We believe music connects people across borders, languages, and backgrounds. With Tubido, you have access to an extensive collection of music, and we are committed to continually improving our platform by integrating more languages, more accessibility features, and more music genres to satisfy our diverse global audience.
+    </p>
+    <p>
+        Tubido is not just a website; it is a global community of music enthusiasts who share a common love for rhythm, melody, and creativity. We partner with trusted services to bring you content while supporting artists and rights holders. We do not store or host any music; we provide a bridge to legally available content through platforms like YouTube.
+    </p>
+    <p>
+        Our team is dedicated to keeping Tubido safe, legal, and enjoyable. We encourage feedback and strive to make your experience as smooth as possible. Thank you for trusting Tubido as your destination for discovering and enjoying music worldwide.
+    </p>
+</div>
+
+<footer>
+    &copy; 2025 Tubido. All rights reserved.
+</footer>
+
+<script>
+    function changeLanguage() {
+        const lang = document.getElementById('language').value;
+        const aboutTitle = document.getElementById('about-title');
+        const aboutContent = document.getElementById('about-content');
+
+        const languageTitles = {
+            "Worldwide": "About Tubido",
+            "India": "टुबिडो के बारे में",
+            "Israel": "על טובידו",
+            "Germany": "Über Tubido",
+            "USA": "About Tubido",
+            "Arabia": "عن Tubido",
+            "France": "À propos de Tubido",
+            "Britain": "About Tubido",
+            "UK": "About Tubido",
+            "Africa": "About Tubido"
+        };
+
+        const languageContents = {
+            "Worldwide": `<p>Tubido is a worldwide platform created to help users discover, watch, and enjoy music content...</p>`,
+            "India": `<p>टुबिडो एक वैश्विक मंच है जो उपयोगकर्ताओं को दुनिया भर से संगीत सामग्री खोजने...</p>`,
+            "Israel": `<p>טובידו היא פלטפורמה עולמית שנועדה לעזור למשתמשים לגלות...</p>`,
+            "Germany": `<p>Tubido ist eine weltweite Plattform, die es Nutzern ermöglicht...</p>`,
+            "USA": `<p>Tubido is a worldwide platform created to help users discover...</p>`,
+            "Arabia": `<p>توبيدو هو منصة عالمية تساعد المستخدمين على اكتشاف...</p>`,
+            "France": `<p>Tubido est une plateforme mondiale qui aide les utilisateurs à découvrir...</p>`,
+            "Britain": `<p>Tubido is a worldwide platform created to help users discover...</p>`,
+            "UK": `<p>Tubido is a worldwide platform created to help users discover...</p>`,
+            "Africa": `<p>Tubido is a worldwide platform created to help users discover...</p>`
+        };
+
+        aboutTitle.textContent = languageTitles[lang];
+        aboutContent.innerHTML = languageContents[lang];
+    }
+</script>
+
+</body>
+</html>
+
+
